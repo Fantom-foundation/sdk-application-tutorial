@@ -15,9 +15,9 @@ package cli
 import (
 	"fmt"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/Fantom-foundation/cosmos-sdk/client"
+	"github.com/Fantom-foundation/cosmos-sdk/client/context"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
 	"github.com/cosmos/sdk-application-tutorial/x/nameservice/types"
 	"github.com/spf13/cobra"
 )
@@ -109,12 +109,12 @@ func GetCmdNames(queryRoute string, cdc *codec.Codec) *cobra.Command {
 
 Notes on the above code:
 
-- The CLI introduces a new `context`: [`CLIContext`](https://godoc.org/github.com/cosmos/cosmos-sdk/client/context#CLIContext). It carries data about user input and application configuration that are needed for CLI interactions.
+- The CLI introduces a new `context`: [`CLIContext`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/client/context#CLIContext). It carries data about user input and application configuration that are needed for CLI interactions.
 - The `path` required for the `cliCtx.QueryWithData()` function maps directly to the names in your query router.
   - The first part of the path is used to differentiate the types of queries possible to SDK applications: `custom` is for `Queriers`.
   - The second piece (`nameservice`) is the name of the module to route the query to.
   - Finally there is the specific querier in the module that will be called.
-  - In this example the fourth piece is the query. This works because the query parameter is a simple string. To enable more complex query inputs you need to use the second argument of the [`.QueryWithData()`](https://godoc.org/github.com/cosmos/cosmos-sdk/client/context#CLIContext.QueryWithData) function to pass in `data`. For an example of this see the [queriers in the Staking module](https://github.com/cosmos/cosmos-sdk/blob/develop/x/stake/querier/querier.go#L103).
+  - In this example the fourth piece is the query. This works because the query parameter is a simple string. To enable more complex query inputs you need to use the second argument of the [`.QueryWithData()`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/client/context#CLIContext.QueryWithData) function to pass in `data`. For an example of this see the [queriers in the Staking module](https://github.com/Fantom-foundation/cosmos-sdk/blob/develop/x/stake/querier/querier.go#L103).
 
 ## Transactions
 
@@ -128,13 +128,13 @@ package cli
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/Fantom-foundation/cosmos-sdk/client"
+	"github.com/Fantom-foundation/cosmos-sdk/client/context"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
 	"github.com/cosmos/sdk-application-tutorial/x/nameservice/types"
-	"github.com/cosmos/cosmos-sdk/x/auth/client/utils"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/auth"
+	"github.com/Fantom-foundation/cosmos-sdk/x/auth/client/utils"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
+	"github.com/Fantom-foundation/cosmos-sdk/x/auth"
 )
 
 func GetTxCmd(storeKey string, cdc *codec.Codec) *cobra.Command {
@@ -219,6 +219,6 @@ func GetCmdSetName(cdc *codec.Codec) *cobra.Command {
 
 Notes on the above code:
 
-- The `authcmd` package is used here. [The godocs have more information on usage](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth/client/cli#GetAccountDecoder). It provides access to accounts controlled by the CLI and facilitates signing.
+- The `authcmd` package is used here. [The godocs have more information on usage](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/x/auth/client/cli#GetAccountDecoder). It provides access to accounts controlled by the CLI and facilitates signing.
 
 ### Now your ready to define [the routes that the REST client will use to communicate with your module](rest.md)!

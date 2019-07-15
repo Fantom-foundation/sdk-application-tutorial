@@ -15,19 +15,19 @@ import (
 
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/x/auth"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
+	"github.com/Fantom-foundation/cosmos-sdk/x/auth"
 
-	"github.com/cosmos/cosmos-sdk/x/auth/genaccounts"
+	"github.com/Fantom-foundation/cosmos-sdk/x/auth/genaccounts"
 
-	"github.com/cosmos/cosmos-sdk/x/bank"
-	distr "github.com/cosmos/cosmos-sdk/x/distribution"
-	"github.com/cosmos/cosmos-sdk/x/params"
-	"github.com/cosmos/cosmos-sdk/x/staking"
+	"github.com/Fantom-foundation/cosmos-sdk/x/bank"
+	distr "github.com/Fantom-foundation/cosmos-sdk/x/distribution"
+	"github.com/Fantom-foundation/cosmos-sdk/x/params"
+	"github.com/Fantom-foundation/cosmos-sdk/x/staking"
 	"github.com/cosmos/sdk-application-tutorial/x/nameservice"
 
-	bam "github.com/cosmos/cosmos-sdk/baseapp"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	bam "github.com/Fantom-foundation/cosmos-sdk/baseapp"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 	cmn "github.com/tendermint/tendermint/libs/common"
 	dbm "github.com/tendermint/tendermint/libs/db"
@@ -37,9 +37,9 @@ import (
 Links to godocs for each module and package imported:
 
 - [`log`](https://godoc.org/github.com/tendermint/tendermint/libs/log): Tendermint's logger.
-- [`auth`](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth): The `auth` module for the Comsos SDK.
+- [`auth`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/x/auth): The `auth` module for the Comsos SDK.
 - [`dbm`](https://godoc.org/github.com/tendermint/tendermint/libs/db): Code for working with the Tendermint database.
-- [`baseapp`](https://godoc.org/github.com/cosmos/cosmos-sdk/baseapp): See below
+- [`baseapp`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/baseapp): See below
 
 A couple of the packages here are `tendermint` packages. Tendermint passes transactions from the network to the application through an interface called the [ABCI](https://github.com/tendermint/tendermint/tree/master/abci). If you look at the architecture of the blockchain node you are building, it looks like the following:
 
@@ -61,7 +61,7 @@ A couple of the packages here are `tendermint` packages. Tendermint passes trans
 +---------------------+
 ```
 
-Fortunately, you do not have to implement the ABCI interface. The Cosmos SDK provides a boilerplate implementation of it in the form of [`baseapp`](https://godoc.org/github.com/cosmos/cosmos-sdk/baseapp).
+Fortunately, you do not have to implement the ABCI interface. The Cosmos SDK provides a boilerplate implementation of it in the form of [`baseapp`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/baseapp).
 
 Here is what `baseapp` does:
 

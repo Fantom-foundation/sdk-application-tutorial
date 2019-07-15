@@ -1,6 +1,6 @@
 ## 开始
 
-在本教程中，你将构建一个功能性的 [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) 应用。过程中能学习基本的概念和SDK的结构。该示例将展示如何基于 Cosmos SDK 快速、轻松地**从头开始构建自己的区块链**。
+在本教程中，你将构建一个功能性的 [Cosmos SDK](https://github.com/Fantom-foundation/cosmos-sdk/) 应用。过程中能学习基本的概念和SDK的结构。该示例将展示如何基于 Cosmos SDK 快速、轻松地**从头开始构建自己的区块链**。
 
 在本章教程结束时，你会得到一个功能性的`nameservice`应用，一个字符串对字符串的映射关系表(`map[string]string`)。类似于[Namecoin](https://namecoin.org/)，[ENS](https://ens.domains/)，[Handshake](https://handshake.org/)这些模仿传统的DNS系统（map[domain]zonefile）的应用。用户可以购买未被使用的域名，或是出售/交易这些域名。
 

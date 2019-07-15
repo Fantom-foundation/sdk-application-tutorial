@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
+	"github.com/Fantom-foundation/cosmos-sdk/client/context"
 	"github.com/cosmos/sdk-application-tutorial/x/nameservice/types"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/rest"
-	"github.com/cosmos/cosmos-sdk/x/auth/client/utils"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
+	"github.com/Fantom-foundation/cosmos-sdk/types/rest"
+	"github.com/Fantom-foundation/cosmos-sdk/x/auth/client/utils"
 
 	"github.com/gorilla/mux"
 )

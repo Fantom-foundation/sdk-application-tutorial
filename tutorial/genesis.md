@@ -10,7 +10,7 @@ package nameservice
 import (
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 

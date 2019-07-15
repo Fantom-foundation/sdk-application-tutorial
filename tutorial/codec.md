@@ -6,7 +6,7 @@ To [register your types with Amino](https://github.com/tendermint/go-amino#regis
 package types
 
 import (
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
 )
 
 var ModuleCdc = codec.New()

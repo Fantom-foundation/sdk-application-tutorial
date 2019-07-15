@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 )
 
 // Initial Starting Price for a name that was never previously owned

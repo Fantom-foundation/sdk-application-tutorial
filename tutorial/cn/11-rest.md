@@ -15,11 +15,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	clientrest "github.com/cosmos/cosmos-sdk/client/rest"
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/rest"
+	"github.com/Fantom-foundation/cosmos-sdk/client/context"
+	clientrest "github.com/Fantom-foundation/cosmos-sdk/client/rest"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
+	"github.com/Fantom-foundation/cosmos-sdk/types/rest"
 	"github.com/cosmos/sdk-application-tutorial/x/nameservice"
 
 	"github.com/gorilla/mux"
@@ -189,7 +189,7 @@ func setNameHandler(cdc *codec.Codec, cliCtx context.CLIContext) http.HandlerFun
 
 注意上述代码：
 
-- [`BaseReq`](https://godoc.org/github.com/cosmos/cosmos-sdk/client/utils#BaseReq)包含用于进行交易的基本必填字段（使用哪个密钥，如何解码，使用哪条链等等）并且如所示被设计成嵌入形式。
+- [`BaseReq`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/client/utils#BaseReq)包含用于进行交易的基本必填字段（使用哪个密钥，如何解码，使用哪条链等等）并且如所示被设计成嵌入形式。
 - `baseReq.ValidateBasic`和`utils.CompleteAndBroadcastTxREST`为你设置响应代码，因此你需担心在使用这些函数时处理错误或成功。
 
 ###  现在你的模块已经具备了全部功能，需要[与 Cosmos SDK 应用合并](./12-app-complete.md)。

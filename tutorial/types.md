@@ -22,7 +22,7 @@ package types
 import (
 	"fmt"
 	"strings"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 )
 
 // Whois is a struct that contains all the metadata of a name

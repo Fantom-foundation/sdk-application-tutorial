@@ -10,7 +10,7 @@ package nameservice
 import (
 	"encoding/json"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 )
 
 // MsgSetName defines a SetName message
@@ -97,7 +97,7 @@ package nameservice
 import (
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 )
 
 // NewHandler returns a handler for "nameservice" type messages.

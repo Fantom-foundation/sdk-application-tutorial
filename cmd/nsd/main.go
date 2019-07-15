@@ -4,17 +4,17 @@ import (
 	"encoding/json"
 	"io"
 
-	"github.com/cosmos/cosmos-sdk/server"
-	"github.com/cosmos/cosmos-sdk/x/auth/genaccounts"
-	genaccscli "github.com/cosmos/cosmos-sdk/x/auth/genaccounts/client/cli"
-	"github.com/cosmos/cosmos-sdk/x/staking"
+	"github.com/Fantom-foundation/cosmos-sdk/server"
+	"github.com/Fantom-foundation/cosmos-sdk/x/auth/genaccounts"
+	genaccscli "github.com/Fantom-foundation/cosmos-sdk/x/auth/genaccounts/client/cli"
+	"github.com/Fantom-foundation/cosmos-sdk/x/staking"
 
 	"github.com/spf13/cobra"
 	"github.com/tendermint/tendermint/libs/cli"
 	"github.com/tendermint/tendermint/libs/log"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	genutilcli "github.com/cosmos/cosmos-sdk/x/genutil/client/cli"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
+	genutilcli "github.com/Fantom-foundation/cosmos-sdk/x/genutil/client/cli"
 	app "github.com/cosmos/sdk-application-tutorial"
 	abci "github.com/tendermint/tendermint/abci/types"
 	dbm "github.com/tendermint/tendermint/libs/db"

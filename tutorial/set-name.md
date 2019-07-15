@@ -8,7 +8,7 @@ The naming convention for the SDK `Msgs` is `Msg{ .Action }`. The first action t
 package types
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 )
 
 const RouterKey = ModuleName // this was defined in your key.go file
@@ -93,7 +93,7 @@ package nameservice
 import (
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 )
 
 // NewHandler returns a handler for "nameservice" type messages.

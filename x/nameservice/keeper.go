@@ -1,10 +1,10 @@
 package nameservice
 
 import (
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/x/bank"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
+	"github.com/Fantom-foundation/cosmos-sdk/x/bank"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 )
 
 // Keeper maintains the link to data storage and exposes getter/setter methods for the various parts of the state machine

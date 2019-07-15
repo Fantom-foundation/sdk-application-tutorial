@@ -44,7 +44,7 @@ ifeq ($(LEDGER_ENABLED),true)
   else
     UNAME_S = $(shell uname -s)
     ifeq ($(UNAME_S),OpenBSD)
-      $(warning OpenBSD detected, disabling ledger support (https://github.com/cosmos/cosmos-sdk/issues/1988))
+      $(warning OpenBSD detected, disabling ledger support (https://github.com/Fantom-foundation/cosmos-sdk/issues/1988))
     else
       GCC = $(shell command -v gcc 2> /dev/null)
       ifeq ($(GCC),)
@@ -90,7 +90,7 @@ module github.com/cosmos/sdk-application-tutorial
 go 1.12
 
 require (
-	github.com/cosmos/cosmos-sdk v0.28.2-0.20190616100639-18415eedaf25
+	github.com/Fantom-foundation/cosmos-sdk v0.28.2-0.20190616100639-18415eedaf25
 	github.com/gorilla/mux v1.7.0
 	github.com/mattn/go-isatty v0.0.7 // indirect
 	github.com/prometheus/procfs v0.0.0-20190328153300-af7bedc223fb // indirect

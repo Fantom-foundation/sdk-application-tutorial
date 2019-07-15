@@ -12,10 +12,10 @@ Cosmos SDK模块的主要核心是名为`Keeper`的部分。它处理同存储�
 package nameservice
 
 import (
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/x/bank"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
+	"github.com/Fantom-foundation/cosmos-sdk/x/bank"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 )
 
 // Keeper maintains the link to data storage and exposes getter/setter methods for the various parts of the state machine
@@ -33,13 +33,13 @@ type Keeper struct {
 关于上述代码的几点说明：
 
 - 3个不同的`cosmos-sdk`包被引入：
-  - [`codec`](https://godoc.org/github.com/cosmos/cosmos-sdk/codec) - 提供负责Cosmos编码格式的工具——[Amino](https://github.com/tendermint/go-amino)。
-  - [`bank`](https://godoc.org/github.com/cosmos/cosmos-sdk/x/bank) - `bank`模块控制账户和转账。
-  - [`types`](https://godoc.org/github.com/cosmos/cosmos-sdk/types) - `types`包含了整个SDK常用的类型。
+  - [`codec`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/codec) - 提供负责Cosmos编码格式的工具——[Amino](https://github.com/tendermint/go-amino)。
+  - [`bank`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/x/bank) - `bank`模块控制账户和转账。
+  - [`types`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/types) - `types`包含了整个SDK常用的类型。
 - `Keeper`结构体。在 keeper 中有几个关键部分：
-  - [`bank.Keeper`](https://godoc.org/github.com/cosmos/cosmos-sdk/x/bank#Keeper) : 这是`bank`模块的`Keeper`引用。包括它来允许该模块中的代码调用`bank`模块的函数。SDK使用[`对象能力`](https://en.wikipedia.org/wiki/Object-capability_model)来访问应用程序状态的各个部分。这是为了允许开发人员采用小权限准入原则，限制错误或恶意模块的去影响其不需要访问的状态的能力。
-  - [`*codec.Codec`](https://godoc.org/github.com/cosmos/cosmos-sdk/codec#Codec) : 这是被Amino用于编码及解码二进制机构的编码解码器的指针。
-  - [`sdk.StoreKey`](https://godoc.org/github.com/cosmos/cosmos-sdk/types#StoreKey) : 通过它来访问一个持久化保存你的应用程序状态的`sdk.KVStore`。
+  - [`bank.Keeper`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/x/bank#Keeper) : 这是`bank`模块的`Keeper`引用。包括它来允许该模块中的代码调用`bank`模块的函数。SDK使用[`对象能力`](https://en.wikipedia.org/wiki/Object-capability_model)来访问应用程序状态的各个部分。这是为了允许开发人员采用小权限准入原则，限制错误或恶意模块的去影响其不需要访问的状态的能力。
+  - [`*codec.Codec`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/codec#Codec) : 这是被Amino用于编码及解码二进制机构的编码解码器的指针。
+  - [`sdk.StoreKey`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/types#StoreKey) : 通过它来访问一个持久化保存你的应用程序状态的`sdk.KVStore`。
 - 模块有1个StoreKey:
   - `storeKey` - 这是 name 指向（如 `map[name]Whois`）Whois 结构的主存储空间，
 
@@ -60,7 +60,7 @@ func (k Keeper) SetWhois(ctx sdk.Context, name string, whois Whois) {
 
 在此方法中，首先使用`Keeper`中的`namesStoreKey`获取`map[name]value`的存储对象。
 
-> 注意：这个函数使用[`sdk.Context`](https://godoc.org/github.com/cosmos/cosmos-sdk/types#Context)。该对象持有访问像`blockHeight`和`chainID`这样重要部分状态的函数。
+> 注意：这个函数使用[`sdk.Context`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/types#Context)。该对象持有访问像`blockHeight`和`chainID`这样重要部分状态的函数。
 
 接下来，你可以使用方法`.Set([]byte,[]byte)`向存储中插入`<name, value>`键值对。由于存储只接受`[]byte`,想要把`string`转化成`[]byte`再把它们作为参数传给`Set`方法。
 

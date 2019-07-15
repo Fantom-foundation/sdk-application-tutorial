@@ -106,6 +106,6 @@ func handleMsgBuyName(ctx sdk.Context, keeper Keeper, msg MsgBuyName) sdk.Result
 
 如果`SubtractCoins`或`SendCoins`返回一个非空错误，handler会抛出一个错误，回退状态转变。没有的话，使用之前在`Keeper`上定义的 getter 和 setter，handler 将买方设置为新所有者，并将新价格设置为当前出价。
 
-> 注意：此handler使用`coinKeeper`中的函数执行货币相关操作。如果你的应用程序正在执行货币相关操作，你可能需要查看此模块的[文档](https://godoc.org/github.com/cosmos/cosmos-sdk/x/bank#BaseKeeper)，以查看它提供的功能。
+> 注意：此handler使用`coinKeeper`中的函数执行货币相关操作。如果你的应用程序正在执行货币相关操作，你可能需要查看此模块的[文档](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/x/bank#BaseKeeper)，以查看它提供的功能。
 
 ###  现在已经有了 `Msgs` and `Handlers` 定义，是时候学习如何使交易中的数据能被[查询](./08-queriers.md)到！

@@ -1,9 +1,9 @@
 package nameservice
 
 import (
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 

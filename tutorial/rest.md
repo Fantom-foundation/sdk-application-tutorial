@@ -15,12 +15,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
+	"github.com/Fantom-foundation/cosmos-sdk/client/context"
 	"github.com/cosmos/sdk-application-tutorial/x/nameservice/types"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/rest"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
+	"github.com/Fantom-foundation/cosmos-sdk/types/rest"
 
 	"github.com/gorilla/mux"
 )
@@ -188,7 +188,7 @@ func setNameHandler(cliCtx context.CLIContext) http.HandlerFunc {
 
 Notes on the above code:
 
-- The [`BaseReq`](https://godoc.org/github.com/cosmos/cosmos-sdk/client/utils#BaseReq) contains the basic required fields for making a transaction (which key to use, how to decode it, which chain you are on, etc...) and is designed to be embedded as shown.
+- The [`BaseReq`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/client/utils#BaseReq) contains the basic required fields for making a transaction (which key to use, how to decode it, which chain you are on, etc...) and is designed to be embedded as shown.
 - `baseReq.ValidateBasic` handles setting the response code for you and therefore you don't need to worry about handling errors or successes when using those functions.
 
 ### Next its time to augment `nameservice` by implementing the [AppModule interface](./module.md)!

@@ -1,6 +1,6 @@
 # Import your modules and finish your application
 
-Now that your module is ready, it can be incorporated in the `./app.go` file, along with the other two modules [`auth`](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth) and [`bank`](https://godoc.org/github.com/cosmos/cosmos-sdk/x/bank). Let's begin by adding your new nameservice module to the imports:
+Now that your module is ready, it can be incorporated in the `./app.go` file, along with the other two modules [`auth`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/x/auth) and [`bank`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/x/bank). Let's begin by adding your new nameservice module to the imports:
 
 > _*NOTE*_: Your application needs to import the code you just wrote. Here the import path is set to this repository (`github.com/cosmos/sdk-application-tutorial/x/nameservice`). If you are following along in your own repo you will need to change the import path to reflect that (`github.com/{ .Username }/{ .Project.Repo }/x/nameservice`).
 
@@ -17,18 +17,18 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	bam "github.com/cosmos/cosmos-sdk/baseapp"
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/cosmos/cosmos-sdk/x/auth"
-	"github.com/cosmos/cosmos-sdk/x/auth/genaccounts"
-	"github.com/cosmos/cosmos-sdk/x/bank"
-	distr "github.com/cosmos/cosmos-sdk/x/distribution"
-	"github.com/cosmos/cosmos-sdk/x/genutil"
-	"github.com/cosmos/cosmos-sdk/x/params"
-	"github.com/cosmos/cosmos-sdk/x/slashing"
-	"github.com/cosmos/cosmos-sdk/x/staking"
+	bam "github.com/Fantom-foundation/cosmos-sdk/baseapp"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
+	sdk "github.com/Fantom-foundation/cosmos-sdk/types"
+	"github.com/Fantom-foundation/cosmos-sdk/types/module"
+	"github.com/Fantom-foundation/cosmos-sdk/x/auth"
+	"github.com/Fantom-foundation/cosmos-sdk/x/auth/genaccounts"
+	"github.com/Fantom-foundation/cosmos-sdk/x/bank"
+	distr "github.com/Fantom-foundation/cosmos-sdk/x/distribution"
+	"github.com/Fantom-foundation/cosmos-sdk/x/genutil"
+	"github.com/Fantom-foundation/cosmos-sdk/x/params"
+	"github.com/Fantom-foundation/cosmos-sdk/x/slashing"
+	"github.com/Fantom-foundation/cosmos-sdk/x/staking"
 	"github.com/cosmos/sdk-application-tutorial/x/nameservice"
 )
 
@@ -353,7 +353,7 @@ func (app *nameServiceApp) ExportAppStateAndValidators(forZeroHeight bool, jailW
 }
 ```
 
-Finally add a helper function to generate an amino [`*codec.Codec`](https://godoc.org/github.com/cosmos/cosmos-sdk/codec#Codec) that properly registers all of the modules used in your application:
+Finally add a helper function to generate an amino [`*codec.Codec`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/codec#Codec) that properly registers all of the modules used in your application:
 
 ```go
 // MakeCodec generates the necessary codecs for Amino

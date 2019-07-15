@@ -11,9 +11,9 @@ package app
 
 import (
   "github.com/tendermint/tendermint/libs/log"
-  "github.com/cosmos/cosmos-sdk/x/auth"
+  "github.com/Fantom-foundation/cosmos-sdk/x/auth"
 
-  bam "github.com/cosmos/cosmos-sdk/baseapp"
+  bam "github.com/Fantom-foundation/cosmos-sdk/baseapp"
   dbm "github.com/tendermint/tendermint/libs/db"
 )
 ```
@@ -21,9 +21,9 @@ import (
 下面是各引入模块和包的文档：
 
 - [`log`](https://godoc.org/github.com/tendermint/tendermint/libs/log): Tendermint 的日志
-- [`auth`](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth): Cosmos SDK 的`auth`模块
+- [`auth`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/x/auth): Cosmos SDK 的`auth`模块
 - [`dbm`](https://godoc.org/github.com/tendermint/tendermint/libs/db): Tendermint 的数据库代码
-- [`baseapp`](https://godoc.org/github.com/cosmos/cosmos-sdk/baseapp): 如下
+- [`baseapp`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/baseapp): 如下
 
 这里有几个包是`tendermint`包。Tendermint 通过名为 [ABCI](https://github.com/tendermint/tendermint/tree/master/abci) 的接口将交易从网络传递给应用程序。如果你要查看正在构建的区块链节点的架构，如下所示：
 
@@ -45,7 +45,7 @@ import (
 +---------------------+
 ```
 
-幸运的是，你不必实现ABCI接口。Cosmos SDK以[`baseapp`](https://godoc.org/github.com/cosmos/cosmos-sdk/baseapp)的形式提供了它的实现样板。
+幸运的是，你不必实现ABCI接口。Cosmos SDK以[`baseapp`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/baseapp)的形式提供了它的实现样板。
 
 `baseapp`做了以下几点：
 

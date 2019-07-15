@@ -3,9 +3,9 @@ package cli
 import (
 	"fmt"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/Fantom-foundation/cosmos-sdk/client"
+	"github.com/Fantom-foundation/cosmos-sdk/client/context"
+	"github.com/Fantom-foundation/cosmos-sdk/codec"
 	"github.com/cosmos/sdk-application-tutorial/x/nameservice/types"
 	"github.com/spf13/cobra"
 )

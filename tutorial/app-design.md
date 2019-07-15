@@ -6,7 +6,7 @@ A blockchain application is just a [replicated deterministic state machine](http
 
 > Tendermint is an application-agnostic engine that is responsible for handling the _networking_ and _consensus_ layers of your blockchain. In practice, this means that Tendermint is reponsible for propagating and ordering transaction bytes. Tendermint Core relies on an eponymous Byzantine-Fault-Tolerant (BFT) algorithm to reach consensus on the order of transactions. For more on Tendermint, click [here](https://tendermint.com/docs/introduction/introduction.html).
 
-The [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) is designed to help you build state machines. The SDK is a **modular framework**, meaning applications are built by aggregating a collection of interoperable modules. Each module contains its own message/transaction processor, while the SDK is responsible for routing each message to its respective module.
+The [Cosmos SDK](https://github.com/Fantom-foundation/cosmos-sdk/) is designed to help you build state machines. The SDK is a **modular framework**, meaning applications are built by aggregating a collection of interoperable modules. Each module contains its own message/transaction processor, while the SDK is responsible for routing each message to its respective module.
 
 Here are the modules you will need for the nameservice application:
 
@@ -25,7 +25,7 @@ The state represents your application at a given moment. It tells how much token
 
 The state of tokens and accounts is defined by the `auth` and `bank` modules, which means you don't have to concern yourself with it for now. What you need to do is define the part of the state that relates specifically to your `nameservice` module.
 
-In the SDK, everything is stored in one store called the `multistore`. Any number of key/value stores (called [`KVStores`](https://godoc.org/github.com/cosmos/cosmos-sdk/types#KVStore) in the Cosmos SDK) can be created in this multistore. For this application, we will use one store to map `name`s to its respective `whois`, a struct that holds a name's value, owner, and price.
+In the SDK, everything is stored in one store called the `multistore`. Any number of key/value stores (called [`KVStores`](https://godoc.org/github.com/Fantom-foundation/cosmos-sdk/types#KVStore) in the Cosmos SDK) can be created in this multistore. For this application, we will use one store to map `name`s to its respective `whois`, a struct that holds a name's value, owner, and price.
 
 ## Messages
 
